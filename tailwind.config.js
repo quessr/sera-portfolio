@@ -3,7 +3,7 @@ module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/styles/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -22,7 +22,7 @@ module.exports = {
         xs: "450px",
       },
       backgroundImage: {
-        "main-pattern": "url('/src/assets/mainbg.png')",
+        "main-pattern": "url('/assets/mainbg.png')",
       },
     },
   },
