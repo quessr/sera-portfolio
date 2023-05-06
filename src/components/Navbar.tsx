@@ -1,7 +1,7 @@
 import { styles } from "@/styles/common";
 import clsx from "clsx";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { logo } from "@/assets";
 import Logo from "@/assets/logo.svg";
 import { navLinks } from "@/constants";
@@ -11,11 +11,25 @@ import Menu from "@/assets/menu.svg";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setScrolled(scrollTop > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <nav
       className={clsx(
         styles.paddingX,
-        "w-full flex items-center py-5 fixed top-0 bg-primary"
+        scrolled ? " bg-primary" : "bg-transparent",
+        "w-full flex items-center py-5 fixed top-0 z-20"
       )}
     >
       <div
