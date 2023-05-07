@@ -4,10 +4,8 @@ import Navbar from "@/components/Navbar";
 export default function Home() {
   return (
     <div className="relative bg-primary">
-      <div className="bg-main-pattern bg-cover bg-no-repeat bg-center">
-        <Navbar />
-        <Main />
-      </div>
+      <Navbar />
+      <Main />
 
       {/**About */}
       {/**Experience */}
