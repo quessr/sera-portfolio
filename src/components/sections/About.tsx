@@ -2,10 +2,11 @@ import { styles } from "@/styles/common";
 import Image from "next/image";
 import { FC } from "react";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer, textVariant } from "@/utils/motion";
+import { fadeIn, textVariant } from "@/utils/motion";
 import clsx from "clsx";
 import { roles } from "@/constants";
 import Tilt from "react-parallax-tilt";
+import Section from "../layouts/Section";
 
 interface RoleCardProps {
   index: number;
@@ -43,14 +44,7 @@ const RoleCard: FC<RoleCardProps> = ({ title, icon, index }) => {
 
 const About: FC = () => {
   return (
-    <motion.section
-      id="about"
-      className={(clsx(styles.padding), "max-w-7xl mx-auto relative z-0")}
-      variants={staggerContainer()}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.25 }}
-    >
+    <Section id="about">
       <motion.div variants={textVariant(0)}>
         <p className={styles.sectionSubText}>About</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
@@ -72,7 +66,7 @@ const About: FC = () => {
           return <RoleCard key={role.title} index={index} {...role} />;
         })}
       </div>
-    </motion.section>
+    </Section>
   );
 };
 
