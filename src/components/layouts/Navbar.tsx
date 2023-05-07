@@ -42,6 +42,7 @@ const Navbar = () => {
         {/**title */}
         <Link
           href="/"
+          scroll={false}
           className="flex items-center gap-2"
           onClick={() => {
             setActive("");
@@ -63,7 +64,9 @@ const Navbar = () => {
               )}
               onClick={() => setActive(link.title)}
             >
-              <Link href={`#${link.id}`}>{link.title}</Link>
+              <Link href={`#${link.id}`} scroll={false}>
+                {link.title}
+              </Link>
             </li>
           ))}
         </ul>
@@ -105,7 +108,9 @@ const Navbar = () => {
                     setActive(link.title);
                   }}
                 >
-                  <Link href={`#${link.id}`}>{link.title}</Link>
+                  <Link href={`#${link.id}`} scroll={false}>
+                    {link.title}
+                  </Link>
                 </li>
               ))}
             </ul>

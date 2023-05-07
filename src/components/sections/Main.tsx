@@ -43,7 +43,7 @@ const Main = () => {
           "absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center"
         )}
       >
-        <Link href="#about">
+        <Link href="#about" scroll={false}>
           <div
             className={clsx(
               "w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justifyl-center items-start p-2"
