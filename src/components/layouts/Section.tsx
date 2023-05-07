@@ -11,7 +11,7 @@ const Section: FC<SectionProps> = ({ children, id }) => {
   return (
     <motion.section
       id={id}
-      className={(clsx(styles.padding), "max-w-7xl mx-auto relative z-0")}
+      className={clsx(styles.padding, "max-w-7xl mx-auto relative z-0")}
       variants={staggerContainer()}
       initial="hidden"
       whileInView="show"
