@@ -1,13 +1,13 @@
-import Main from "@/components/Main";
-import Navbar from "@/components/Navbar";
+import About from "@/components/sections/About";
+import Main from "@/components/sections/Main";
+import Navbar from "@/components/layouts/Navbar";
 
 export default function Home() {
   return (
     <div className="relative bg-primary">
       <Navbar />
       <Main />
-
-      {/**About */}
+      <About />
       {/**Experience */}
       {/**Skills*/}
       {/**Projects */}

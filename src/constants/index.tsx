@@ -11,3 +11,7 @@ export const navLinks = [
     title: "Contact",
   },
 ];
+
+export const roles = [
+  { title: "Web Frontend Developer", icon: "/assets/web.png" },
+];
