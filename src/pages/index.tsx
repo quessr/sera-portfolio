@@ -3,6 +3,7 @@ import Main from "@/components/sections/Main";
 import Navbar from "@/components/layouts/Navbar";
 import Experience from "@/components/sections/Experience";
 import Skills from "@/components/sections/Skills";
+import Projects from "@/components/canvas/Projects";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       <About />
       <Experience />
       <Skills />
-      {/**Projects */}
+      <Projects />
       {/**Contact */}
     </div>
   );

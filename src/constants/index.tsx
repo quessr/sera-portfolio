@@ -52,3 +52,47 @@ export const skills = [
   { name: "Typescript", icon: "/assets/skills/typescript.png" },
   { name: "Reactjs", icon: "/assets/skills/reactjs.png" },
 ];
+
+export const projects = [
+  {
+    name: "Solab 관리사이트",
+    description:
+      "직원들의 업무 처리를 원활하게 하기 위해, 어드민 사이트를 구축",
+    tags: [
+      {
+        name: "Typescript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "React",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Vite",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: "/assets/solab.png",
+  },
+  {
+    name: "Mocco",
+    description:
+      "온라인 상에서 스터디를 진행하고, 서로의 결과물을 캐릭터의 움직임을 통해 시각화 하여 확인할 수 있는 서비스",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "recoil",
+        color: "green-text-gradient",
+      },
+      {
+        name: "emotion",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: "/assets/mocco.png",
+    source_code_link: "https://github.com/codestates-seb/seb39_main_060",
+  },
+];
