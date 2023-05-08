@@ -41,3 +41,14 @@ export const experiences = [
     ],
   },
 ];
+
+export const skills = [
+  {
+    name: "HTML",
+    icon: "/assets/skills/html.png",
+  },
+  { name: "CSS", icon: "/assets/skills/css.png" },
+  { name: "Javascript", icon: "/assets/skills/javascript.png" },
+  { name: "Typescript", icon: "/assets/skills/typescript.png" },
+  { name: "Reactjs", icon: "/assets/skills/reactjs.png" },
+];
