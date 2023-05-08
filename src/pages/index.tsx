@@ -1,6 +1,7 @@
 import About from "@/components/sections/About";
 import Main from "@/components/sections/Main";
 import Navbar from "@/components/layouts/Navbar";
+import Experience from "@/components/sections/Experience";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <Navbar />
       <Main />
       <About />
-      {/**Experience */}
+      <Experience />
       {/**Skills*/}
       {/**Projects */}
       {/**Contact */}
