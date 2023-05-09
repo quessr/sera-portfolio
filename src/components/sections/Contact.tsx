@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useRef, useState } from "react";
 import Section from "../layouts/Section";
 import { styles } from "@/styles/common";
 import clsx from "clsx";
@@ -8,6 +8,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { motion } from "framer-motion";
 import { slideIn } from "@/utils/motion";
+import emailjs from "@emailjs/browser";
 
 const schema = yup.object({
   name: yup
@@ -21,9 +22,12 @@ const schema = yup.object({
   message: yup.string().required("Please enter a message"),
 });
 type Schema = yup.InferType<typeof schema>;
+
 const Contact: FC = () => {
   const [loading, setLoading] = useState(false);
   const {
+    reset,
+    getValues,
     register,
     handleSubmit,
     formState: { errors },
@@ -31,7 +35,22 @@ const Contact: FC = () => {
     resolver: yupResolver(schema),
   });
   const onSubmit = (data: Schema) => {
-    console.log("data", data);
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: getValues("name"),
+          from_email: getValues("email"),
+          message: getValues("message"),
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        setLoading(false);
+        alert("감사합니다. 확인 후, 가능한 빨리 답변 드리도록 하겠습니다.");
+        reset();
+      });
   };
   return (
     <Section id="contact">
@@ -54,7 +73,7 @@ const Contact: FC = () => {
                   "bg-tertiary py-4 px-6",
                   "placeholder:text-secondary text-white font-medium",
                   "rounded-lg outline-none border-none",
-                  "disabled: cursor-not-allowed"
+                  "disabled:cursor-not-allowed"
                 )}
                 placeholder="What's your name?"
                 autoComplete="off"
@@ -75,7 +94,7 @@ const Contact: FC = () => {
                   "bg-tertiary py-4 px-6",
                   "placeholder:text-secondary text-white font-medium",
                   "rounded-lg outline-none border-none",
-                  "disabled: cursor-not-allowed"
+                  "disabled:cursor-not-allowed"
                 )}
                 placeholder="What's your email?"
                 autoComplete="off"
@@ -94,7 +113,7 @@ const Contact: FC = () => {
                   "bg-tertiary py-4 px-6",
                   "placeholder:text-secondary text-white font-medium",
                   "rounded-lg outline-none border-none resize-none",
-                  "disabled: cursor-not-allowed"
+                  "disabled:cursor-not-allowed"
                 )}
                 placeholder="Please leave a message."
                 {...register("message")}
