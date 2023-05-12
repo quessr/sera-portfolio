@@ -49,7 +49,6 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <Logo className="w-9 h-9" />
           <p className="text-white text-lg font-bold">Sera &nbsp;</p>
         </Link>
 

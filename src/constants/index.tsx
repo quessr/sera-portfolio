@@ -51,6 +51,8 @@ export const skills = [
   { name: "Javascript", icon: "/assets/skills/javascript.png" },
   { name: "Typescript", icon: "/assets/skills/typescript.png" },
   { name: "Reactjs", icon: "/assets/skills/reactjs.png" },
+  { name: "Nextjs", icon: "/assets/skills/nextjs.png" },
+  { name: "Vite", icon: "/assets/skills/vite.png" },
 ];
 
 export const projects = [
@@ -73,6 +75,47 @@ export const projects = [
       },
     ],
     image: "/assets/solab.png",
+  },
+  {
+    name: "Sera's portfolio",
+    description:
+      "사용자가 포트폴리오의 내용을 확인하면서 마우스 인터랙션으로 움직임을 제어 할 수 있는 사이트 구축",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "recoil",
+        color: "green-text-gradient",
+      },
+      {
+        name: "emotion",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: "/assets/portfolio.png",
+    source_code_link: "https://github.com/codestates-seb/seb39_main_060",
+  },
+  {
+    name: "Pygmalihome",
+    description: "LH, SH 청약공고를 모아보고 청약일 알림을 보내주는 서비스",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: "/assets/pygmalihome.png",
+    source_code_link: "https://github.com/codestates-seb/seb39_main_060",
   },
   {
     name: "Mocco",

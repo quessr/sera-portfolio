@@ -79,7 +79,7 @@ const Projects: FC = () => {
         <p className={styles.sectionSubText}>MY PROJECTS</p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
-      <div className="mt-20 flex felx-wrap gap-7">
+      <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => {
           return <ProjectCard key={project.name} index={index} {...project} />;
         })}

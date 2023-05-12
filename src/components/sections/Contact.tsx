@@ -57,7 +57,7 @@ const Contact: FC = () => {
       <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="bg-black-100 p-8 rounded-2xl flex-[0.75]"
+          className="bg-black-100 p-8 rounded-2xl flex-[0.75] min-w-[360px]"
         >
           <p className={styles.sectionSubText}>Please contact me</p>
           <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -135,6 +135,7 @@ const Contact: FC = () => {
             </button>
           </form>
         </motion.div>
+
         <motion.div
           variants={slideIn("right", "tween", 0.2, 1)}
           className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"

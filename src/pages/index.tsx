@@ -16,7 +16,6 @@ export default function Home() {
       <Experience />
       <Skills />
       <Projects />
-      {/**Contact */}
       <div className="relative z-0">
         <Contact />
         <StarsCanvas />
