@@ -79,7 +79,7 @@ export const projects = [
   {
     name: "Sera's portfolio",
     description:
-      "사용자가 인터랙션을 통해 콘텐츠를 탐색 가능하며, 모바일 및 데스크탑에서 모두 잘 보이는 반응형 포트폴리오 사이트입니다.",
+      "사용자가 인터랙션을 통해 콘텐츠를 탐색 가능하며, 모바일 및 데스크탑에서 모두 잘 보이는 반응형 포트폴리오 사이트",
     tags: [
       {
         name: "react",
