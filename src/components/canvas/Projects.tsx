@@ -36,6 +36,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
           {source_code_link && (
             <a
               href={source_code_link}
+              target="_blank"
               className={clsx(
                 "absolute black-gradient top-3 right-3",
                 "w-10 h-10 rounded-full",

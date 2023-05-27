@@ -95,7 +95,7 @@ export const projects = [
       },
     ],
     image: "/assets/portfolio.png",
-    source_code_link: "https://github.com/codestates-seb/seb39_main_060",
+    source_code_link: "https://github.com/quessr/sera-portfolio",
   },
   {
     name: "Pygmalihome",
@@ -115,7 +115,7 @@ export const projects = [
       },
     ],
     image: "/assets/pygmalihome.png",
-    source_code_link: "https://github.com/codestates-seb/seb39_main_060",
+    source_code_link: "https://github.com/quessr/pygmalihome",
   },
   {
     name: "Mocco",
@@ -136,6 +136,6 @@ export const projects = [
       },
     ],
     image: "/assets/mocco.png",
-    source_code_link: "https://github.com/codestates-seb/seb39_main_060",
+    source_code_link: "https://github.com/quessr/mocco",
   },
 ];
