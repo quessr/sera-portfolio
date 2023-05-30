@@ -17,14 +17,12 @@ interface ExperienceCardProps {
   name: string;
   date: string;
   points: string[];
-  iconBg: string;
 }
 const ExperienceCard: FC<ExperienceCardProps> = ({
   title,
   name,
   date,
   points,
-  iconBg,
 }) => {
   return (
     <VerticalTimelineElement

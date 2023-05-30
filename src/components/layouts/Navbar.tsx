@@ -2,8 +2,6 @@ import { styles } from "@/styles/common";
 import clsx from "clsx";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { logo } from "@/assets";
-import Logo from "@/assets/logo.svg";
 import { navLinks } from "@/constants";
 import Close from "@/assets/close.svg";
 import Menu from "@/assets/menu.svg";
